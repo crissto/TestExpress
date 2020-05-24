@@ -1,9 +1,9 @@
 const request = require("supertest");
-const app = require("../app");
+const app = require("../src/app");
 
 describe("API endpoints", () => {
   // If I had a DB this could be reset on each test.
-  // As I'm saving everything in memory I can't reset the server while preserving state.
+  // As I'm saving everything in memory I can't reset the server and preserve state.
   const server = request(app);
   describe("getScores", () => {
     it("Should return no scores initially", async () => {
